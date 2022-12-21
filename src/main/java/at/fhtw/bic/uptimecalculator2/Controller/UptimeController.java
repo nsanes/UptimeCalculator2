@@ -10,7 +10,7 @@ import static java.awt.Color.*;
 @RestController
 public class UptimeController {
     @GetMapping("/uptime")
-    public Color showComplementaryyColor(String color) {
+    public String showComplementaryyColor(String color) {
         if (color.equals(red)) {
             return green;
         } else if (color.equals(green)) {
@@ -23,6 +23,6 @@ public class UptimeController {
             return magenta;
         } else if (color.equals(magenta)) {
             return yellow;
-        } else return black;
+        } else return "default";
     }
 }
